@@ -1,34 +1,28 @@
-# NextJS Starter
+# TypeScript & Styled Components Next.js example
 
-## About
+This is a really simple project that show the usage of Next.js with TypeScript and Styled Components.
 
-This is a skeleton for a nextjs site including a custom page layout with header footer and meta. Add new pages in the pages folder to create new routes. Includes:
+## Deploy your own
 
-- [ESLint](https://github.com/eslint/eslint)
-- [NextJS](https://github.com/zeit/next.js/)
-- [NProgress](https://github.com/rstacruz/nprogress)
-- [Prettier](https://github.com/prettier/prettier)
-- [React](https://github.com/facebook/react)
-- [Styled Components](https://github.com/styled-components/styled-components)
+Deploy the example using [Vercel](https://vercel.com):
 
-## Installation
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript-styled-components)
 
-- Clone this repo
-- `yarn`
+## How to use it?
 
-## Running dev
+Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
-- `yarn next`
+```bash
+npx create-next-app --example with-typescript-styled-components with-typescript-styled-components
+# or
+yarn create next-app --example with-typescript-styled-components with-typescript-styled-components
+```
 
-## Running prod
+Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
-- `yarn build`
-- `yarn start`
+## Notes
 
-## Linting
+This is an amalgamation of the 2 existing examples:
 
-- `yarn lint`
-
-### Other Notes
-
-- This project has styled components theme provider setup. You can edit a lot of the colours in `Page.js`
+- [with-typescript](https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
+- [with-styled-components](https://github.com/vercel/next.js/tree/canary/examples/with-styled-components)
