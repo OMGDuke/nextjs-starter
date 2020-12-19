@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --pretty --noEmit",
-    "format": "prettier --write .",
+    "format": "prettier --write ."
   },
   "husky": {
     "hooks": {
