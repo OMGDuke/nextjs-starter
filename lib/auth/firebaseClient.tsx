@@ -21,7 +21,8 @@ if (typeof window !== 'undefined' && !firebaseClient.apps.length) {
   firebaseClient
     .auth()
     .setPersistence(firebaseClient.auth.Auth.Persistence.LOCAL)
-  ;(window as any).firebase = firebaseClient
+  const wind = window as any
+  wind.firebase = firebaseClient
 }
 
 export { firebaseClient }

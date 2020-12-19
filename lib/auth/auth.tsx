@@ -27,7 +27,8 @@ export function AuthProvider({
 
   useEffect(() => {
     if (typeof window !== undefined) {
-      ;(window as any).nookies = nookies
+      const wind = window as any
+      wind.nookies = nookies
     }
     return firebaseClient.auth().onIdTokenChanged(async (user) => {
       if (!user) {
