@@ -32,11 +32,8 @@ module.exports = {
       { functions: false, classes: false, variables: false },
     ],
     'import/extensions': 'off',
-    // "import/no-cycle": [0, { ignoreExternal: true }],
-    // "jsx-a11y/anchor-is-valid": "off",
     'no-console': ['error', { allow: ['warn'] }],
     'no-use-before-define': 'off',
-    // "prefer-const": "off",
     'prettier/prettier': [
       'error',
       {
@@ -49,7 +46,6 @@ module.exports = {
     ],
     'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
     'react/jsx-props-no-spreading': ['error', { custom: 'ignore' }],
-    // "react/no-unescaped-entities": "off",
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
   },
