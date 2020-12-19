@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import React from 'react'
 import { AuthProvider } from 'lib/auth/auth'
+import Meta from 'components/Meta'
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -54,6 +55,7 @@ const GlobalStyle = createGlobalStyle`
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <>
+      <Meta></Meta>
       <Head>
         <title>My Next Site</title>
       </Head>
