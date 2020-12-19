@@ -15,15 +15,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
       "pre-push": "npm run type-check"
     }
-  },
-  "lint-staged": {
-    "*.@(ts|tsx)": [
-      "npm run lint",
-      "npm run format"
-    ]
   },
   "dependencies": {
     "axios": "^0.21.0",
@@ -50,7 +43,6 @@
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.21.5",
     "husky": "^4.3.6",
-    "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
