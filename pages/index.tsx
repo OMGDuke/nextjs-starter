@@ -1,10 +1,10 @@
 import { ReactElement } from 'react'
 import styled from 'styled-components'
-import GoogleSignIn from '../components/GoogleSignIn'
+import GoogleSignIn from 'components/GoogleSignIn'
 
-import { signOut, useAuth } from '../lib/auth/auth'
+import { signOut, useAuth } from 'lib/auth/auth'
 
-import type { ExampleType } from '../types'
+import type { ExampleType } from 'types'
 
 const exampleData: ExampleType = {
   title: 'My Next Project',
@@ -14,8 +14,9 @@ export default function Home(): ReactElement {
   const { user, userLoading } = useAuth()
   if (userLoading) {
     return <div>Loading</div>
-  } else if (!user) {
-    return <GoogleSignIn></GoogleSignIn>
+  }
+  if (!user) {
+    return <GoogleSignIn />
   }
   return (
     <Container>
