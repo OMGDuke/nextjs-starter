@@ -18,16 +18,20 @@ export default function Home(): ReactElement {
     return <GoogleSignIn></GoogleSignIn>
   }
   return (
-    <div>
+    <Container>
       <Title>{exampleData.title}</Title>
       <div>{user.displayName}</div>
       <button type="button" onClick={signOut}>
         Sign out
       </button>
-    </div>
+    </Container>
   )
 }
 
 const Title = styled.h1`
   font-size: 50px;
+`
+
+const Container = styled.div`
+  padding: 20px;
 `

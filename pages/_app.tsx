@@ -5,21 +5,21 @@ import React from 'react'
 import { AuthProvider } from 'lib/auth/auth'
 
 const GlobalStyle = createGlobalStyle`
- :root {
-  --background: #1b1a20;
-  --on-background: #FFFFFF;
-  --primary: #FF0E39;
-  --on-primary: #FFFFFF; 
-  --surface: #201f25;
-  --on-surface: #FFFFFF;
- }
+  :root {
+    --background: #1b1a20;
+    --on-background: #FFFFFF;
+    --primary: #FF0E39;
+    --on-primary: #FFFFFF; 
+    --surface: #201f25;
+    --on-surface: #FFFFFF;
+  }
   html {
     background: var(--background);
   }
   html,
   body {
     position: relative;
-    color: var(----on-background);
+    color: var(--on-background);
     padding: 0;
     margin: 0;
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
