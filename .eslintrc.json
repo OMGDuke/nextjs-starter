@@ -17,6 +17,7 @@
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "prettier/@typescript-eslint",
+    "stylelint",
     "plugin:prettier/recommended"
   ],
   "settings": {
