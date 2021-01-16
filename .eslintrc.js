@@ -31,25 +31,41 @@ module.exports = {
       'error',
       { functions: false, classes: false, variables: false },
     ],
-    'import/extensions': 'off',
+    camelcase: 0,
+    'consistent-return': 0,
+    'import/extensions': 0,
+    'import/prefer-default-export': 0,
+    indent: 0,
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['hrefLeft', 'hrefRight'],
+        aspects: ['invalidHref', 'preferButton'],
+      },
+    ],
     'no-console': ['error', { allow: ['warn'] }],
-    'no-use-before-define': 'off',
+    'no-use-before-define': 0,
     'prettier/prettier': [
       'error',
       {
         semi: false,
         singleQuote: true,
-        tabWidth: 2,
         useTabs: false,
-        endOfLine: 'auto',
+        tabWidth: 2,
+        printWidth: 80,
       },
     ],
+    radix: 0,
     'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
     'react/jsx-props-no-spreading': ['error', { custom: 'ignore' }],
-    'react/prop-types': 'off',
-    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 0,
+    'react/react-in-jsx-scope': 0,
   },
   settings: {
+    react: {
+      version: 'detect',
+    },
     'import/resolver': {
       'babel-module': {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
