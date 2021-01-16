@@ -52,19 +52,17 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
-  return (
-    <>
-      <Meta></Meta>
-      <Head>
-        <title>My Next Site</title>
-      </Head>
-      <GlobalStyle />
-      <AuthProvider>
-        <Component {...pageProps} />
-      </AuthProvider>
-    </>
-  )
-}
+const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => (
+  <>
+    <Meta />
+    <Head>
+      <title>My Next Site</title>
+    </Head>
+    <GlobalStyle />
+    <AuthProvider>
+      <Component {...pageProps} />
+    </AuthProvider>
+  </>
+)
 
 export default MyApp

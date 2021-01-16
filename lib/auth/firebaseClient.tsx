@@ -25,4 +25,4 @@ if (typeof window !== 'undefined' && !firebaseClient.apps.length) {
   wind.firebase = firebaseClient
 }
 
-export { firebaseClient }
+export default firebaseClient

@@ -7,7 +7,7 @@ import React, {
 } from 'react'
 import nookies from 'nookies'
 import firebase from 'firebase/app'
-import { firebaseClient } from './firebaseClient'
+import firebaseClient from './firebaseClient'
 
 const AuthContext = createContext<{
   user: firebaseClient.User | null
@@ -30,16 +30,16 @@ export function AuthProvider({
       const wind = window as any
       wind.nookies = nookies
     }
-    return firebaseClient.auth().onIdTokenChanged(async (user) => {
-      if (!user) {
+    return firebaseClient.auth().onIdTokenChanged(async (newUser) => {
+      if (!newUser) {
         setUser(null)
         setUserLoading(false)
         nookies.destroy(null, 'token')
         nookies.set(null, 'token', '', { path: '/' })
         return
       }
-      const token = await user.getIdToken()
-      setUser(user)
+      const token = await newUser.getIdToken()
+      setUser(newUser)
       setUserLoading(false)
       nookies.destroy(null, 'token')
       nookies.set(null, 'token', token, {
@@ -52,8 +52,8 @@ export function AuthProvider({
   // force refresh the token every 10 minutes
   useEffect(() => {
     const handle = setInterval(async () => {
-      const user = firebaseClient.auth().currentUser
-      if (user) await user.getIdToken(true)
+      const { currentUser } = firebaseClient.auth()
+      if (currentUser) await currentUser.getIdToken(true)
     }, 10 * 60 * 1000)
     return () => clearInterval(handle)
   }, [])
@@ -68,9 +68,7 @@ export function AuthProvider({
 export const useAuth = (): {
   user: firebaseClient.User | null
   userLoading: boolean
-} => {
-  return useContext(AuthContext)
-}
+} => useContext(AuthContext)
 
 export const signIn = (): void => {
   const provider = new firebase.auth.GoogleAuthProvider()
